@@ -1,0 +1,19 @@
+{
+  "name": "project_3",
+  "version": "1.0.0",
+  "description": "Final GT Full-Stack Course Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drewpb333/Project_3.git"
+  },
+  "author": "Andrew B., Charles D., Asif K., Sirish K., Ivan V.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Drewpb333/Project_3/issues"
+  },
+  "homepage": "https://github.com/Drewpb333/Project_3#readme"
+}
