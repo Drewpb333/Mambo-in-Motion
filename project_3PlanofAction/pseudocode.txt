@@ -1,0 +1,145 @@
+Drone functionality
+
+not sure where to put drone functionality files? repl.js file
+
+run in node.js
+
+need to use express library and a node package ("leaning towards ar-drone at the moment");
+
+Lean toward using ardone-autonomy if utilizing autonomous missions;
+
+
+Decide between using ardone-autonomy and PS3 controller/dronestream versions 
+
+If we use ardone-autonomy, do the following:
+
+Will need ardrone-autonomy package, and most likely ar-drone as well.
+
+The UI will depend on user text input fields.  These will then be sent to a route
+(e.g. '/drone').  This route will take in the input in the form of a json and
+create an object/array(array sounds best because easier for executing order).
+
+
+If we use dronestream, do the following:
+
+For the dronestream version, will need dronestream package and/or package for ps4 controller
+and most likely ar-drone as well.
+
+
+
+
+For use with ar-drone:
+
+Enter "npm install git://github.com/felixge/node-ar-drone.git" into git terminal
+
+Create a repl.js file for drone functionality
+
+Require the 'ar-drone' package and assign it to const arDrone.
+Call the createClient() method on arDrone and assign it to const client.
+
+It looks like commands are executed on the client object(e.g. takeoff, after);
+
+.after() is like set timeout but with time in ms as the first argument and a 
+callback function with a command (e.g. )
+
+Other methods:
+
+client.createREPL()
+
+client.getPngStream()
+
+client.getVideoStream()
+
+client.takeoff(callback function)
+
+client.land(callback function)
+
+client.up(speed)/client.down(speed)  a variable from 0 to 1
+
+client.clockwise(speed)/client.counterClockwise(speed)  a variable from 0 to 1
+
+client/front(speed)/client.back(speed) speed can be a variable from 0 to 1
+
+client.left(speed)/client.right(speed)  speed can be a variable from 0 to 1
+
+client.stop()   stops all movements and makes drone hover in place
+
+client.animate(animation, duration)
+Performs a pre-programmed flight sequence for a given duration (in ms). animation can be one
+a multitude of sequences
+
+client.animateLeds(animation, hz, duration)
+
+FOR ACCESSING CAMERA
+
+// access the head camera
+client.config('video:video_channel', 0);
+
+// access the bottom camera
+client.config('video:video_channel', 3);
+
+FOR AUTONOMOUS PACKAGE:
+
+Create a UI that allows for input from the user in text input fields
+
+Have a climb field(altitude() method), directions field(forward, backward, right, left() methods),
+hover(input time in seconds; make sure to convert to ms), and possibly 
+other fields for pitch, yaw, etcs.
+
+have a dropdown bar for using feet as an option
+
+Have a button for adding this to the screen.
+
+Have a button for 
+
+Instructions for ardrone-autonomy package:
+
+import an autonomy object from the 'ardrone-autonomy' pakcage;
+Create a mission object and assign it using autonomy.createMission();
+
+Example of autonomous instructions
+
+mission.takeoff()
+       .zero()       // Sets the current state as the reference
+       .altitude(1)  // Climb to altitude = 1 meter
+       .forward(2)   
+       .right(2)     
+       .backward(2) 
+       .left(2)
+       .hover(1000)  // Hover in place for 1 second
+       .land();
+ 
+lengths are measured in meters. consider giving conversion option to feet (1m = 3.28084 feet)
+
+time is measured in ms
+
+example of ending code
+
+mission.zero()
+
+mission.run(function (err, result) {
+    if (err) {
+        console.trace("Oops, something bad happened: %s", err.message);
+        mission.client().stop();
+        mission.client().land();
+    } else {
+        console.log("Mission success!");
+        process.exit(0);
+    }
+});
+
+What HTML, API, other routes will be necessary?
+
+Let's use Router in lieu of HTML routes.  This can be done in the front end
+
+API route for dealing with autonomous and real-time commands
+
+Autonomous API will accept info from front-end in a json format;
+
+
+
+
+
+
+
+

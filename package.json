@@ -1,19 +1,22 @@
 {
-  "name": "project_3",
+  "name": "mern",
   "version": "1.0.0",
-  "description": "Final GT Full-Stack Course Project",
-  "main": "index.js",
+  "description": "Mern Demo",
+  "main": "server.js",
   "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Drewpb333/Project_3.git"
-  },
-  "author": "Andrew B., Charles D., Asif K., Sirish K., Ivan V.",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Drewpb333/Project_3/issues"
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/Drewpb333/Project_3#readme"
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }
