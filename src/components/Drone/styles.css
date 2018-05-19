@@ -1,0 +1,69 @@
+.drone {
+  position: relative;
+  margin: 10px 10px 0;
+  font-size: 12px;
+}
+
+.drone-icon {
+  width: 150px;
+  fill: #21271C;
+}
+
+.drone-connect {
+  position: absolute;
+  top: 67px;
+  left: calc(50% - 5px);
+}
+
+.drone-connected {
+  color: #A6DD7F;
+}
+
+.drone-connecting {
+  animation-name: connecting;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+}
+
+.drone-landing {
+  animation-name: flash;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+}
+
+.drone-flying {
+  fill: #A6DD7F;
+}
+
+.drone-emergency {
+  animation-name: flashred;
+  animation-duration: .7s;
+  animation-iteration-count: 3;
+}
+
+@keyframes flash {
+  from {
+    fill: #1A1110;
+  }
+  to {
+    fill: #E2995A;
+  }
+}
+
+@keyframes flashred {
+  from {
+    fill: #21271C;
+  }
+  to {
+    fill: #CD4A50;
+  }
+}
+
+@keyframes connecting {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #E2995A;
+  }
+}

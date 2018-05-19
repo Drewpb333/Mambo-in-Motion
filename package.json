@@ -1,23 +1,38 @@
 {
-  "name": "mern",
-  "version": "1.0.0",
-  "description": "Mern Demo",
-  "main": "server.js",
-  "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Cdriver556 <cdriver556@gmail.com>",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
-  },
+  "name": "drone-react-server",
+  "version": "0.0.1",
+  "private": true,
   "dependencies": {
-    "express": "^4.15.4"
+    "dualshock-controller": "^1.1.1",
+    "express": "^4.15.4",
+    "keypress": "^0.2.1",
+    "nodemon": "^1.12.1",
+    "parrot-minidrone": "robertbg/npm-parrot-minidrone",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.13",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
   },
-  "repository": "git@github.com:Drewpb333/Project_3.git"
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js"
+  },
+  "devDependencies": {
+    "concurrently": "3.1.0",
+    "eslint": "^4.7.0",
+    "eslint-config-react-app": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Cdriver556/drone-react.git",
+  "author": "Cdriver556 <cdriver556@gmail.com>",
+  "license": "MIT"
 }

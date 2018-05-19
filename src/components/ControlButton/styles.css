@@ -1,0 +1,30 @@
+/** CONTROL BUTTONS **/
+.control_button {
+  position: absolute;
+  border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+}
+.control_button:hover {
+	margin-top: 2px;
+}
+.control_button:active {
+	margin-top: 6px;
+}
+.control_button-up, .control_button-forward {
+  top: 15px;
+  left: calc(50% - 30px);
+}
+.control_button-right {
+  top: calc(50% - 30px);
+  right: 15px;
+}
+.control_button-down, .control_button-backward {
+  top: calc(100% - 80px);
+  left: calc(50% - 30px);
+}
+.control_button-left {
+  top: calc(50% - 30px);
+  left: 15px;
+}
