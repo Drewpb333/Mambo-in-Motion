@@ -1,77 +1,68 @@
-# Drone UI for Parrot Minidrones
-Just for fun, built using React / Express and Socket.io.
+# Web Bluetooth Parrot Mini Drone Controller
 
-![Drone UI Screenshot](https://raw.githubusercontent.com/robertbg/drone-react/develop/screenshot.png)
+Controlling a Parrot Mini Drone from a web browser, using [Web Bluetooth](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web?hl=en).
 
-## Usage Instructions
-- `yarn install`
-- Connect to minidrone via Bluetooth (instructions below)
-- Add your minidrones network name to the 'droneName' property in config.js
-- `yarn start`
-- Browser will open control window in new tab
-## How to connect to a minidrone via Bluetooth on a Mac
-You won't be able to find the minidrone via a normal bluetooth device search as minidrones emit BTLE (Bluetooth Low Energy) connections. To connect to this, follow these instructions...
+![Parrot mini drone](docs/images/parrot-mini-drone.jpg?raw=true "Parrot mini drone") 
 
-- Install XCode
-- In the top menu, go to Xcode > Open Developer Tool > More Developer Tools
-- This will open a page in your browser.
-- Download and install the latest 'Additional Tools for XCode' binary.
-- Open Hardware > Bluetooth Explorer
-- In the top menu, go to Devices > Low Energy Devices
-- Search for your drone and click 'Connect'
+## Demo Video
 
-## Run Jest Unit Tests
-- `yarn test`
+[![Demo video](https://j.gifs.com/wp482w.gif)](https://youtu.be/gXu3G3cg52k)
+ 
+[(https://youtu.be/gXu3G3cg52k)](https://youtu.be/gXu3G3cg52k) 
+ 
+## Setup
 
-## Other Fun & Games
-- This repo also contains copies of the two command line based examples provided as part of the [parrot mini-drone node library](https://github.com/fetherston/npm-parrot-minidrone) used on this project. To play with these use the following commands.
+Currently [requires Chrome or Opera](http://caniuse.com/#feat=web-bluetooth), or Samsung Internet Beta with Web Bluetooth switched on in `internet://flags`.
 
-### Keyboard Controls
-To fly with the keyboard follow the below instructions.
+Run the web app up on your dev machine with any simple web server that can serve static files, e.g.: `python -m SimpleHTTPServer 8080`
 
-1. Turn on the drone
-1. Run `node cli/keyboard.js`
-1. Wait to see the drone connected message in the console output
+Go to `chrome://inspect/#devices` and enable port forwarding for port 8080.
+Now you should be able to visit `localhost:8080` on your Android device, to see the dashboard. 
 
-#### Control Layout
-*Key* | Function
---- | ---
-**Arrow Up** | Pitch +
-**Arrow Down** | Pitch -
-**Left Arrow** | Roll left
-**Left Arrow** | Roll right
-**w** | Altitude +
-**s** | Altitude +
-**a** | Yaw left
-**d** | Yaw right
-**t** | Toggle takeoff & land
-**f** | Flattrim
-**Escape** | Emergency land
+NB. You can't just point to an IP address because Web Bluetooth requires HTTPS, if not serving from `localhost`. 
 
-### Dualshock PlayStation Controller
-Follow these directions from the root of the project to fly with a PS3/4 controller
+If you wish to host a version somewhere, it will need to be over HTTPS.
 
-1. Turn on the drone
-1. Plug in the controller via USB or connect to your computer via Bluetooth
-1. Run `node cli/ps4.js`
-1. Wait to see the drone connected message in the console output
+## Safety warning
 
-#### Control Layout
-*Button* | Function
---- | ---
-**Right Analog Stick** | Altitude, yaw
-**Left Analog Stick** | Roll, pitch
-**Square** | Flat-trim
-**Triangle** | Toggle takeoff & land
-**Circle** | Emergency landing
-**X** | Take a picture
-**L1** | Left flip
-**R1** | Right Flip
-**L2** | Front Flip
-**R2** | Back Flip
+There may be bugs! Please observe the usual caution with drone flying as well as making sure you have a backup method 
+of disabling the drone in the event of a bug! (A technique I have used is to raise something like a strong piece of 
+card up towards the drone from underneath. When it detects it has been touched, the drone should shut down automatically).
 
-## Thanks to
-- [This parrot mini-drone node library](https://github.com/fetherston/npm-parrot-minidrone).
-- [create-react-app](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html) for making get started on building a React app so easy! a starting point for the controller CSS.
-- Credits:
-  - Drone icon by mikicon from the Noun Project
+## Then...
+
+* Ensure the drone is switched on and the lights are green.
+
+* Press the 'Connect' button.
+
+![App screenshot](docs/images/app.png?raw=true "App screenshot")
+
+* Select your drone name to pair with.
+
+![Pair screen](docs/images/pair-screen.png?raw=true "Pair screen")
+
+* Now you're in control! Try Take Off, Flip and Land.  
+
+## Troubleshooting
+
+I still need to fix taking off multiple times - for now you will need to refresh the page.
+
+If it doesn't work, try switching the drone off and on again, wait for the green lights, and then try the above again.
+Please note the drone will need to have enough battery life remaining or it may silently ignore commands.
+
+If you *still* have trouble, you can have the remote debugging tools open in Chrome to see the console logs and this 
+may help you to see where it's going wrong, at least. If you spot any fixes / improvements that could be made, PRs are 
+welcome!
+
+## Parrot Drone Docs
+
+If you are interested to learn more about the API to communicate with the drone, you can find 
+[links to docs here](https://github.com/voodootikigod/node-rolling-spider/issues/78).
+
+## Thanks
+
+I am indebted to [voodootikigod's rolling spider](https://github.com/voodootikigod/node-rolling-spider) project for 
+demonstrating how to communicate with the drone. This demo borrows a lot from it.
+
+Thanks also to [@beaufortfrancois](https://github.com/beaufortfrancois) for collaborating with me to get the demo 
+working better!

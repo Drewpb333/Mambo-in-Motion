@@ -1,0 +1,96 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
+  background: #0ea2dc;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
+  text-shadow: 2px 2px 2px #0b81b0;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.9em;
+}
+
+button {
+  box-sizing: border-box;
+  width: 40%;
+  width: -webkit-calc(50% - 19px);
+  width: calc(50% - 19px);
+  height: 55px;
+  margin: 8px;
+  padding: 5px 0;
+  background: #15619b;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button.emergency {
+  width: 90%;
+  width: -ms-calc(100% - 18px);
+  width: calc(100% - 18px);
+  background: #dd7052;
+}
+
+button.up,
+button.left,
+button.right,
+button.down {
+  background: #38545b;
+  display: block;
+  width: 31%;
+  font-style: normal;
+  font-size: 2em;
+}
+
+.direction-pad > div {
+  text-align: center;
+}
+
+button.connected {
+  background: #dd7052;
+}
+
+button.pending {
+  background: #ddb752;
+}
+
+button.up {
+  margin: 20px auto 0 auto;
+}
+
+button.down {
+  margin: 0 auto 20px auto;
+  clear: both;
+}
+
+button.left {
+  float: left;
+}
+
+button.right {
+  float: right;
+}
+
+button.hover {
+  width: 26%;
+  background: #38545b;
+  font-style: normal;
+  margin: 8px 0;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
