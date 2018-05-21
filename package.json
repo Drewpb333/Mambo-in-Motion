@@ -1,22 +1,19 @@
 {
-  "name": "mern",
-  "version": "1.0.0",
-  "description": "Mern Demo",
-  "main": "server.js",
+  "name": "web-bluetooth-parrot-drone",
+  "version": "1.1.0",
+  "description": "Controlling a Parrot Mini Drone from Chrome for Android, using Web Bluetooth",
+  "main": "index.js",
   "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poshaughnessy/web-bluetooth-parrot-drone.git"
   },
-  "dependencies": {
-    "express": "^4.15.4"
-  }
+  "author": "Peter O'Shaughnessy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poshaughnessy/web-bluetooth-parrot-drone/issues"
+  },
+  "homepage": "https://github.com/poshaughnessy/web-bluetooth-parrot-drone#readme"
 }

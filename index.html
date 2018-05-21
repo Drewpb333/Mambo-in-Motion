@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#0ea2dc"/>
+    <title>Web Bluetooth Drone Demo</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="icon" type="image/png" href="images/app-icon-48.png"/>
+    <link rel="manifest" href="manifest.json"/>
+  </head>
+  <body>
+
+    <h1>Drone Controller</h1>
+
+    <button id="connectBtn">Connect</button>
+    <button id="takeOffBtn">Take off</button>
+
+    <div class="direction-pad">
+      <div>
+        <button id="forwardBtn" class="up">⇧</button>
+      </div>
+      <div>
+        <button id="leftBtn" class="left">⇦</button>
+        <button id="hoverBtn" class="hover">Hover</button>
+        <button id="rightBtn" class="right">⇨</button>
+      </div>
+      <div>
+        <button id="backwardBtn" class="down">⇩</button>
+      </div>
+    </div>
+
+    <button id="flipBtn">Flip</button>
+    <button id="landBtn">Land</button>
+    <button id="emergencyBtn" class="emergency">Emergency Land</button>
+
+    <p>v1.1 &middot; <a href="http://bit.ly/web-bluetooth-drone">Source code</a> &middot; <a href="https://github.com/poshaughnessy/web-bluetooth-parrot-drone/blob/master/docs/safety-warning.md">Safety warning</a></p>
+
+    <script src="js/drone.v1.2.js"></script>
+    <script src="js/main.v1.2.js"></script>
+  </body>
+</html>
