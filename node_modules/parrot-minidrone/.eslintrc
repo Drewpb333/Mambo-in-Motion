@@ -1,0 +1,14 @@
+{
+    "extends": "airbnb-base",
+    "rules": {
+        "indent": ["error", 4],
+        "no-unused-expressions": ["error", { "allowTernary": true }],
+        // specify the maximum length of a line in your program
+        // http://eslint.org/docs/rules/max-len
+        "max-len": [2, 150, 2, {
+          'ignoreUrls': true,
+          'ignoreComments': false
+        }],
+        "global-require": 0
+    }
+}
