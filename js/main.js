@@ -1,3 +1,5 @@
+console.log('Main.js Connected!');
+
 (function() {
 
   const STATE_IDLE = 'IDLE';

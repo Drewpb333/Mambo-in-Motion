@@ -7,6 +7,7 @@
  *  - fd51 - contains 'read write notify' characteristics fd52, fd53, fd54
  *  - fe00 - contains characteristics fe01, fe02, not currently used
  */
+console.log('Drone.js Connected!');
 
 'use strict';
 
@@ -111,7 +112,8 @@ let ParrotDrone = function() {
         filters: [
           { namePrefix: 'RS_' },
           { namePrefix: 'Mars_' },
-          { namePrefix: 'Travis_'}
+          { namePrefix: 'Travis_'},
+          { namePrefix: 'Mambo_'}
         ],
         optionalServices: [
           _getUUID('fa00'),
