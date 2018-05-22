@@ -8,6 +8,7 @@
     "auth0-js": "^9.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router-dom": "^4.3.0-rc.3",
     "react-scripts": "1.0.14"
   },
   "scripts": {
