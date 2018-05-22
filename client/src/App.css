@@ -72,3 +72,184 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/** CONTROL BUTTONS **/
+.control_button {
+  position: absolute;
+  border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+}
+.control_button:hover {
+	margin-top: 2px;
+}
+.control_button:active {
+	margin-top: 6px;
+}
+.control_button-up, .control_button-forward {
+  top: 15px;
+  left: calc(50% - 30px);
+}
+.control_button-right {
+  top: calc(50% - 30px);
+  right: 15px;
+}
+.control_button-down, .control_button-backward {
+  top: calc(100% - 80px);
+  left: calc(50% - 30px);
+}
+.control_button-left {
+  top: calc(50% - 30px);
+  left: 15px;
+}
+  /** ACTION BUTTONS **/
+.action_button {
+  margin: 0 5px;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+.action_button:hover {
+	top: 2px;
+}
+.action_button:active {
+	top: 6px;
+}
+.action_button-red {
+  background-color: rgba(211, 81, 81, 0.63);
+}
+
+.battery {
+  margin: -40px 0 20px;
+  font-size: 20px;
+}
+
+.battery-label {
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.controller {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 100px 30px;
+}
+
+
+.joypad {
+  position: relative;
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  background-color: #30637B;
+  z-index: 2;
+}
+.joypad-mid {
+  height: 230px;
+  width: 420px;
+  z-index: 1;
+  padding: 20px 70px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.drone {
+  position: relative;
+  margin: 10px 10px 0;
+  font-size: 12px;
+}
+
+.drone-icon {
+  width: 150px;
+  fill: #21271C;
+}
+
+.drone-connect {
+  position: absolute;
+  top: 67px;
+  left: calc(50% - 5px);
+}
+
+.drone-connected {
+  color: #A6DD7F;
+}
+
+.drone-connecting {
+  animation-name: connecting;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+}
+
+.drone-landing {
+  animation-name: flash;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+}
+
+.drone-flying {
+  fill: #A6DD7F;
+}
+
+.drone-emergency {
+  animation-name: flashred;
+  animation-duration: .7s;
+  animation-iteration-count: 3;
+}
+
+@keyframes flash {
+  from {
+    fill: #1A1110;
+  }
+  to {
+    fill: #E2995A;
+  }
+}
+
+@keyframes flashred {
+  from {
+    fill: #21271C;
+  }
+  to {
+    fill: #CD4A50;
+  }
+}
+
+@keyframes connecting {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #E2995A;
+  }
+}
+
+.header {
+  background: #21271C;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.header_logo {
+  width: 120px;
+  height: auto;
+}
+
+.header_title {
+  font-size: 34px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.header_info-small {
+  font-size: 12px;
+}
+
+.footer {
+  text-align: center;
+  padding: 0 30px;
+  font-size: 12px;
+}
