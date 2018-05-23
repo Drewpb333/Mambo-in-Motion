@@ -12,8 +12,14 @@ app.use(bodyParser.json());
 //   app.use(express.static("client/build"));
 // }
 
+app.get("/js/drone.js", (req, res) => {
+  res.sendFile(__dirname + "/js/drone.js");
+})
+app.get("/js/main.js", (req, res) => {
+  res.sendFile(__dirname + "/js/main.js");
+})
 app.get("/css/styles.css", ( req, res ) => {
-  res.sendFile( __dirname + "/css/styles.css" );
+  res.sendFile( __dirname + "/css/styles.css" ); 
 });
 app.get("*", ( req, res ) => {
   res.sendFile( __dirname + "/index.html" );
