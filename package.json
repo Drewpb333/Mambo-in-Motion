@@ -4,11 +4,8 @@
   "description": "Controlling a Parrot Mini Drone from Chrome for Android, using Web Bluetooth",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/poshaughnessy/web-bluetooth-parrot-drone.git"
   },
   "author": "Peter O'Shaughnessy",
   "license": "MIT",
