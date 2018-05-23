@@ -1,9 +1,9 @@
 function login(email, password, callback) {
     var connection = mysql({
-      host: 'localhost',
-      user: 'me',
-      password: 'secret',
-      database: 'userAuth_db'
+      host: 's3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	',
+      user: 'g16wp3qv58bqk21t',
+      password: 'zsfkolne2qmgcl8u',
+      database: 'pa70eifikp20y839'
     });
   
     connection.connect();
