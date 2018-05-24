@@ -3,7 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
-var db = require("./models");
+// var db = require("./models");
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,6 +22,9 @@ app.get("/js/main.js", (req, res) => {
 app.get("/css/styles.css", ( req, res ) => {
   res.sendFile( __dirname + "/css/styles.css" ); 
 });
+app.get("/App.css", ( req, res ) => {
+  res.sendFile( __dirname + "/client/build/App.css" ); 
+});
 app.get("*", ( req, res ) => {
   res.sendFile( __dirname + "/client/build/index.html" );
 })
@@ -34,6 +37,6 @@ app.get("*", ( req, res ) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-db.sequelize.sync().then(() => {
+// db.sequelize.sync().then(() => {
   app.listen(PORT, () => console.log(`🌎 ==> Server now on port ${PORT}!`) );
-});
+// });
