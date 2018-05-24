@@ -23,7 +23,7 @@ console.log('Main.js Connected!');
       hoverButton = document.getElementById('hoverBtn'),
       flipButton = document.getElementById('flipBtn'),
       landButton = document.getElementById('landBtn'),
-      emergencyButton = document.getElementById('emergencyBtn');
+      // emergencyButton = document.getElementById('emergencyBtn');
 
     connectButton.addEventListener('click', () => {
 
