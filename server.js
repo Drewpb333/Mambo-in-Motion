@@ -25,7 +25,7 @@ app.get("/css/styles.css", ( req, res ) => {
   res.sendFile( __dirname + "/css/styles.css" ); 
 });
 app.get("*", ( req, res ) => {
-  res.sendFile( __dirname + "/index.html" );
+  res.sendFile( __dirname + "/build/static/index.html" );
 })
 
 // Define API routes here
