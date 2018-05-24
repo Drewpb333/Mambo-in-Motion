@@ -23,11 +23,12 @@
   to { transform: rotate(360deg); }
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 17px;
   line-height: 26px;
-  background-color: #56ACAE;
-  color: #fff;
+	background-image: url("https://9to5toys.files.wordpress.com/2017/08/parrot-mambo-code-2.jpg?quality=82&strip=all&w=1600");
+	background-repeat: no-repeat;	
+  color:black;
 }
 
 html, body {
@@ -46,7 +47,7 @@ html, body {
 	font-weight: 700;
 	outline: none;
 	position: relative;
-  background: #1F271B;
+  background: yellowgreen;
 	color: #fff;
 	box-shadow: 0 6px #0C0F0A;
 	transition: none;
@@ -145,7 +146,7 @@ a:hover {
   height: 260px;
   width: 260px;
   border-radius: 50%;
-  background-color: #30637B;
+  /* background-color: #30637B; */
   z-index: 2;
 }
 .joypad-mid {
@@ -165,7 +166,7 @@ a:hover {
 
 .drone-icon {
   width: 150px;
-  fill: #21271C;
+  fill: yellowgreen;;
 }
 
 .drone-connect {
@@ -228,7 +229,7 @@ a:hover {
 }
 
 .header {
-  background: #21271C;
+  /* background: #21271C; */
   text-align: center;
   padding: 30px 0;
 }
