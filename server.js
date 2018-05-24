@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 //   app.use(express.static("client/build"));
 // }
 
-app.get("/js/drone.js", (req, res) => {
+app.get("/drone.js", (req, res) => {
   res.sendFile(__dirname + "/client/build/drone.js");
 })
-app.get("/js/main.js", (req, res) => {
+app.get("/main.js", (req, res) => {
   res.sendFile(__dirname + "/client/build/main.js");
 })
 app.get("/css/styles.css", ( req, res ) => {
