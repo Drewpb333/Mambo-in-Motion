@@ -25,6 +25,8 @@ app.get("/css/styles.css", ( req, res ) => {
 app.get("/App.css", ( req, res ) => {
   res.sendFile( __dirname + "/client/build/App.css" ); 
 });
+
+//edit to controller.html
 app.get("*", ( req, res ) => {
   res.sendFile( __dirname + "/client/build/index.html" );
 })
