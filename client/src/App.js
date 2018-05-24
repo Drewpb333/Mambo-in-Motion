@@ -18,6 +18,8 @@ class App extends Component {
   <body>
 
     <button className="button" id="connectBtn">Connect</button>
+    <br/>
+    <br/>    
     <button className="button" id="takeOffBtn">Take off</button>
 
     <div className="direction-pad">
