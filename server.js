@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 // }
 
 app.get("/js/drone.js", (req, res) => {
-  res.sendFile(__dirname + "/js/drone.js");
+  res.sendFile(__dirname + "/client/build/drone.js");
 })
 app.get("/js/main.js", (req, res) => {
-  res.sendFile(__dirname + "/js/main.js");
+  res.sendFile(__dirname + "/client/build/main.js");
 })
 app.get("/css/styles.css", ( req, res ) => {
   res.sendFile( __dirname + "/css/styles.css" ); 
