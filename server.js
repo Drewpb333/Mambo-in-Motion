@@ -5,8 +5,6 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 var db = require("./models");
 
-db.sequelize.sync().
-then(() => app.listen(PORT, ()=> console.log("Listening on Port: " + PORT)));
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -36,6 +34,6 @@ app.get("*", ( req, res ) => {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
 
-app.listen(PORT, () => {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => console.log(`🌎 ==> Server now on port ${PORT}!`) );
 });
