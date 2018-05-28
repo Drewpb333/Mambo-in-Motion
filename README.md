@@ -16,4 +16,4 @@ Mambo in Motion currently utilizes the Web Bluetooth API, an experimental techno
 
 ## Acknowledgements
 
-I would like to thank the collaborators in my group: Charles D., Asif K., Sirish K., and Ivan V. I also would like to thank @poshaughnessy for the web-bluetooth-parrot-drone repo. 
+I would like to thank the collaborators in my group: Charles D., Asif K., Sirish K., and Ivan V. I also would like to thank @poshaughnessy for his excellent web-bluetooth-parrot-drone repo. 
